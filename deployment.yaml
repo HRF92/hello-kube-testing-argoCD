@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-app
+  namespace: demo
+spec:
+  selector:
+    matchLabels:
+      app: helloworld-app
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: helloworld-app
+    spec:
+      containers:
+        - name: helloworld-app
+          image: paulbouwer/hello-kubernetes:1.10.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
