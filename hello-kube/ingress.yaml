@@ -11,11 +11,11 @@ metadata:
 spec:
   rules:
   - http:
-    paths:
-    - backend:
-        service:
-          name: demo-service
-          port:
-            number: 80
-      path: /
-      pathType: Prefix
+      paths:
+      - backend:
+          service:
+            name: demo-service
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
