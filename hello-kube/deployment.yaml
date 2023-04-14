@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: helloworld-app
-  replicas: 3
+  replicas: 5
   template:
     metadata:
       labels:
